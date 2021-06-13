@@ -1,0 +1,13 @@
+.weapon label {
+  display: block;
+}
+
+.weapon select,
+.weapon input {
+  width: 100%;
+}
+
+.weapon div {
+  padding: 0 5px;
+}
+/*# sourceMappingURL=weapon-sheet.css.map */

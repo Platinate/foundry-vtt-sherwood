@@ -1,0 +1,68 @@
+form.object {
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 64px 100px;
+      grid-template-rows: 64px 100px;
+  gap: 5px;
+}
+
+form.object .object__header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 64px 1fr;
+      grid-template-columns: 64px 1fr;
+  gap: 5px;
+}
+
+form.object .object__header img {
+  height: 100%;
+}
+
+form.object .object__header input {
+  height: 100%;
+}
+
+form.object .object__header h1 {
+  margin: 0;
+}
+
+form.object .object__footer textarea {
+  height: 100%;
+  max-width: 100%;
+}
+
+.object-card {
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 64px;
+      grid-template-rows: 64px;
+  gap: 5px;
+}
+
+.object-card__header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 64px 1fr;
+      grid-template-columns: 64px 1fr;
+  gap: 5px;
+}
+
+.object-card__header input {
+  height: 100%;
+}
+
+.object-card__header h1 {
+  margin: 0;
+}
+
+.object-card__footer textarea {
+  height: 100%;
+  max-width: 100%;
+}
+/*# sourceMappingURL=object-sheet.css.map */

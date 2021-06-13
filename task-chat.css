@@ -1,0 +1,16 @@
+.task-chat h1, .task-chat h4 {
+  text-align: center;
+}
+
+.task-chat h4 {
+  font-style: italic;
+}
+
+.task-chat .success {
+  color: green;
+}
+
+.task-chat .failure {
+  color: red;
+}
+/*# sourceMappingURL=task-chat.css.map */

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,kBAAkB,CAAC;EACf,OAAO,EAAE,IAAI;CAkBhB;;AAjBI,AAAD,yBAAQ,CAAC;EACL,OAAO,EAAE,IAAI;CAehB;;AAhBA,AAEG,yBAFI,CAEJ,GAAG,CAAC;EACA,IAAI,EAAE,MAAM;EACZ,OAAO,EAAE,KAAK;CACjB;;AALJ,AAOG,yBAPI,CAOJ,KAAK,CAAC;EACF,OAAO,EAAE,KAAK;CACjB;;AATJ,AAWG,yBAXI,CAWJ,MAAM;AAXT,yBAAO,CAYJ,KAAK,CAAC;EACF,KAAK,EAAE,IAAI;CAEd",
+    "sources": [
+        "scss/chat/task-check-dialog.scss"
+    ],
+    "names": [],
+    "file": "task-check-dialog.css"
+}

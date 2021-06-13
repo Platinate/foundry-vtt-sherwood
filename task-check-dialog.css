@@ -1,0 +1,26 @@
+.task-check-dialog {
+  padding: 10px;
+}
+
+.task-check-dialog__stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.task-check-dialog__stats div {
+  -webkit-box-flex: 33.33%;
+      -ms-flex: 33.33%;
+          flex: 33.33%;
+  padding: 0 5px;
+}
+
+.task-check-dialog__stats label {
+  display: block;
+}
+
+.task-check-dialog__stats select,
+.task-check-dialog__stats input {
+  width: 100%;
+}
+/*# sourceMappingURL=task-check-dialog.css.map */

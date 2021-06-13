@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACI,OADG,CACH,KAAK,CAAC;EACF,OAAO,EAAE,KAAK;CACjB;;AAHL,AAKI,OALG,CAKH,MAAM;AALV,OAAO,CAMH,KAAK,CAAC;EACF,KAAK,EAAE,IAAI;CACd;;AARL,AAUI,OAVG,CAUH,GAAG,CAAC;EACA,OAAO,EAAE,KAAK;CAEjB",
+    "sources": [
+        "scss/items/weapon-sheet.scss"
+    ],
+    "names": [],
+    "file": "weapon-sheet.css"
+}
