@@ -1,50 +1,35 @@
 import { SHERWOOD } from "../../config.js";
-import * as Dice from "../dice.js";
 
-export default class SherwoodActorSheet extends ActorSheet {
-
-  static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
-      width: 800,
-      height: 700,
-      classes: ["sherwood", "pc-sheet"],
-      tabs: [
-        {
-          navSelector: ".tabs",
-          contentSelector: ".content",
-          initial: "desc",
-        },
-      ],
-    });
-  }
-
-  /**
-   * SPECIFY THE TEMPALTE WHO WILL BE USED
-   */
-  get template() {
-    return `systems/sherwood/templates/sheets/actors/${this.actor.data.type}-sheet.hbs`;
-  }
-
+export class SherwoodActorSheet extends ActorSheet {
+  /** @override */
   getData() {
-    const data = super.getData();
+    const superData = super.getData();
+    const data = superData.data;
+    data.data.isGM = game.user.isGM;
+    data.actor = superData.actor;
+    data.items = superData.items;
+    data.owner = superData.owner;
+    data.options = superData.options;
+    data.effects = superData.effects;
     data.config = CONFIG.sherwood;
     data.assets = data.items.filter((item) => item.type === "asset");
     data.weapons = data.items.filter((item) => item.type === "weapon");
     data.objects = data.items.filter((item) => item.type === "object");
+    data.dtypes = ["String", "Number", "Boolean"];
     this._setComputedValuesData(data);
     return data;
   }
 
   _setComputedValuesData(sheetData) {
-    sheetData.attributes = Object.entries(sheetData.actor.data.data.attributes).map(
-      ([key, attribute]) => {
-        return {
-          name: key,
-          label: SHERWOOD.attributes[key],
-          value: attribute,
-        };
-      }
-    );
+    sheetData.attributes = Object.entries(
+      sheetData.actor.data.data.attributes
+    ).map(([key, attribute]) => {
+      return {
+        name: key,
+        label: SHERWOOD.attributes[key],
+        value: attribute,
+      };
+    });
 
     sheetData.talents = Object.entries(sheetData.actor.data.data.talents).map(
       ([key, talent]) => {
@@ -57,7 +42,13 @@ export default class SherwoodActorSheet extends ActorSheet {
     );
   }
 
+  /**
+   * Event Listeners
+   */
+
+  /** @override */
   activateListeners(html) {
+    super.activateListeners(html);
     html.find(".item-create").click(this._onItemCreate.bind(this));
     html.find(".item-search").click(this._onItemSearch.bind(this));
     html.find(".item-delete").click(this._onItemDelete.bind(this));
@@ -66,7 +57,6 @@ export default class SherwoodActorSheet extends ActorSheet {
     html.find(".asset .inline-edit").change(this._onAssetEdit.bind(this));
     html.find(".object .inline-edit").change(this._onObjectEdit.bind(this));
     html.find(".weapon .inline-edit").change(this._onWeaponEdit.bind(this));
-    super.activateListeners(html);
   }
 
   _onItemCreate(event) {
@@ -100,7 +90,7 @@ export default class SherwoodActorSheet extends ActorSheet {
 
   _onTaskCheck(event) {
     event.preventDefault();
-    Dice.TaskCheck(this.actor.data.data)
+    Dice.TaskCheck(this.actor.data.data);
   }
 
   _onWeaponEdit(event) {

@@ -1,0 +1,36 @@
+<div>
+          <div class="line">
+          <div class="form-field">
+            <label for="age">{{localize "sherwood.sheet.age"}}</label>
+            <input type="text" name="data.age" id="data.age" data-dtype="Number" value="{{data.age}}" />
+          </div>
+          <div class="form-field">
+            <label for="data.sexe">{{localize "sherwood.sheet.sexe"}}</label>
+            <div class="radio-group">
+              {{radioBoxes "data.sexe" config.sexes checked=data.sexe localize=true}}
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="data.hair">{{localize "sherwood.sheet.hair"}}</label>
+            <input type="text" name="data.hair" id="data.hair" value="{{data.hair}}" />
+          </div>
+          <div class="form-field">
+            <label for="data.size">{{localize "sherwood.sheet.size"}}</label>
+            <input type="number" data-dtype="Number" name="data.size" id="data.size" value="{{data.size}}" />
+          </div>
+        </div>
+        <div class="line">
+          <div class="form-field">
+            <label for="data.weight">{{localize "sherwood.sheet.weight"}}</label>
+            <input type="number" data-dtype="Number" name="data.weight" id="data.weight" value="{{data.weight}}" />
+          </div>
+          <div class="form-field">
+            <label for="data.eyes">{{localize "sherwood.sheet.eyes"}}</label>
+            <input type="text" name="data.eyes" id="data.eyes" value="{{data.eyes}}" />
+          </div>
+        </div>
+        <div class="line" style="flex-wrap: wrap; padding: 10px 0 0 0">
+          <label style="text-align:left" for="data.description">{{localize "sherwood.sheet.description"}}</label>
+          <textarea name="data.description" id="data.description" cols="30" rows="10">{{data.description}}</textarea>
+        </div>
+        </div>

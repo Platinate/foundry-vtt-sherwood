@@ -49,24 +49,6 @@
       .app.pc-sheet form .aside .image img {
         width: 100%;
         height: auto; }
-    .app.pc-sheet form .aside .status {
-      display: flex;
-      flex-direction: column; }
-      .app.pc-sheet form .aside .status h3 {
-        text-align: center; }
-      .app.pc-sheet form .aside .status table {
-        border: 2px solid #782e22;
-        border-radius: 5px;
-        overflow: hidden;
-        font-family: "Caslonish Fraxx"; }
-        .app.pc-sheet form .aside .status table th {
-          color: white;
-          background-color: #782e22;
-          font-size: 1.3em; }
-        .app.pc-sheet form .aside .status table td {
-          padding: 0 5px; }
-          .app.pc-sheet form .aside .status table td input {
-            font-size: 1.4em; }
   .app.pc-sheet form .main {
     flex: 75%;
     padding: 5px; }
@@ -178,6 +160,26 @@
   .app.pc-sheet form .object td,
   .app.pc-sheet form .weapon td {
     padding: 0 5px; }
+
+.status {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column: 1/3; }
+  .status h3 {
+    text-align: center; }
+  .status table {
+    border: 2px solid #782e22;
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: "Caslonish Fraxx"; }
+    .status table th {
+      color: white;
+      background-color: #782e22;
+      font-size: 1.3em; }
+    .status table td {
+      padding: 0 5px; }
+      .status table td input {
+        font-size: 1.4em; }
 
 form.asset {
   padding: 5px;

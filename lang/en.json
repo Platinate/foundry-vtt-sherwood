@@ -102,8 +102,10 @@
             },
             "karma": {
                 "hope": "Hope",
-                "shadow": "Shadow"
+                "shadow": "Shadow",
+                "name": "Karma"
             },
+            "stats": "Attributes",
             "assets": "Assets",
             "weapons": "Weapons",
             "objects": "Objects",

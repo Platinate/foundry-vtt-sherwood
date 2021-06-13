@@ -92,8 +92,10 @@
             },
             "karma": {
                 "hope": "Espoir",
-                "shadow": "Ombre"
+                "shadow": "Ombre",
+                "name": "Karma"
             },
+            "stats": "Attributs",
             "assets": "Atouts",
             "weapons": "Armes",
             "objects": "Objets",

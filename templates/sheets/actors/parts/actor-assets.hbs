@@ -1,0 +1,38 @@
+<table>
+  <colgroup>
+    <col style="width: 25%;" />
+    <col style="width: 65%;" />
+    <col style="width: 5%;" />
+    <col style="width: 5%;" />
+  </colgroup>
+  <tr>
+    <th>{{localize "sherwood.sheet.name"}}</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  {{#each assets as |asset|}}
+    <tr>
+      <td><img
+          style="height: 32px;"
+          src="{{asset.img}}"
+          data-edit="img"
+          title="{{name}}"
+        /></td>
+      <td>
+        <h4 style="font-weight: bold; text-align: center;">{{name}}</h4>
+      </td>
+      <td>
+        <a class="item-search" data-item-id="{{asset._id}}">
+          <i class="fas fa-search"></i>
+        </a>
+      </td>
+      <td>
+        <a class="item-delete" data-item-id="{{asset._id}}">
+          <i class="fas fa-trash"></i>
+        </a>
+      </td>
+    </tr>
+  {{/each}}
+
+</table>

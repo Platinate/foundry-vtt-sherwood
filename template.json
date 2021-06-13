@@ -6,7 +6,7 @@
             "monster"
         ],
         "templates": {
-            "commonStats": {
+            "common": {
                 "description": "",
                 "attributes": {
                     "force": 0,
@@ -40,9 +40,7 @@
             }
         },
         "pc": {
-            "templates": [
-                "commonStats"
-            ],
+            "templates": ["common"],
             "profile": "",
             "size": 0,
             "height": 0,
@@ -54,9 +52,7 @@
             "xp": 0
         },
         "npc": {
-            "templates": [
-                "commonStats"
-            ]
+            "templates": ["common"]
         }
     },
     "Item": {

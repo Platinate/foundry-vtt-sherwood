@@ -58,36 +58,6 @@
                     height: auto;
                 }
             }
-
-            .status {
-                display: flex;
-                flex-direction: column;
-
-                h3 {
-                    text-align: center;
-                }
-
-                table {
-                    border: 2px solid #782e22;
-                    border-radius: 5px;
-                    overflow: hidden;
-                    font-family: "Caslonish Fraxx";
-
-                    th {
-                        color: white;
-                        background-color: #782e22;
-                        font-size: 1.3em;
-                    }
-
-                    td {
-                        padding: 0 5px;
-
-                        input {
-                            font-size: 1.4em;
-                        }
-                    }
-                }
-            }
         }
 
         .main {
@@ -261,6 +231,36 @@
         .weapon {
             td {
                 padding: 0 5px;
+            }
+        }
+    }
+}
+
+.status {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column: 1/3;
+    h3 {
+        text-align: center;
+    }
+
+    table {
+        border: 2px solid #782e22;
+        border-radius: 5px;
+        overflow: hidden;
+        font-family: "Caslonish Fraxx";
+
+        th {
+            color: white;
+            background-color: #782e22;
+            font-size: 1.3em;
+        }
+
+        td {
+            padding: 0 5px;
+
+            input {
+                font-size: 1.4em;
             }
         }
     }

@@ -1,0 +1,47 @@
+<div>
+  <div class="character__attributes">
+    {{#each attributes as |attribute|}}
+      <div class="attribute">
+        <label
+          class="attribute__label"
+          for="data.attributes.{{attribute.name}}"
+        >{{localize attribute.label}}</label>
+        <input
+          class="attribute__input"
+          min="4"
+          step="2"
+          type="number"
+          data-dtype="Number"
+          name="data.attributes.{{attribute.name}}"
+          id="data.attributes.{{attribute.name}}"
+          value="{{attribute.value}}"
+        />
+      </div>
+    {{/each}}
+  </div>
+  <div class="character__talents">
+    {{#each talents as |talent|}}
+      <div class="talent">
+        <label
+          class="talent__label"
+          for="data.talents.{{talent.name}}"
+        >{{localize talent.label}}</label>
+        <input
+          class="talent__input"
+          type="number"
+          min="4"
+          step="2"
+          data-dtype="Number"
+          name="data.talents.{{talent.name}}"
+          id="data.talents.{{talent.name}}"
+          value="{{talent.value}}"
+        />
+      </div>
+    {{/each}}
+  </div>
+  <div style="padding-top: 10px;">
+    <a class="roll__button" style="padding: 5px;">
+      <i class="fas fa-dice"></i>
+    </a>
+  </div>
+</div>
