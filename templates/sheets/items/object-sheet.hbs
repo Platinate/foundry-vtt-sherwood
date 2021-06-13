@@ -1,0 +1,9 @@
+<form action="{{cssClass}}" class="object" autocomplete="off">
+  <div class="object__header">
+    <img src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+    <h1><input type="text" data-dtype="String" name="name" value="{{item.name}}" /></h1>
+  </div>
+  <div class="object__footer">
+    <textarea name="data.description" id="data.description" cols="30" rows="10">{{data.description}}</textarea>
+  </div>
+</form>

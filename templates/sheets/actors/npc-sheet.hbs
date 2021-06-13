@@ -1,0 +1,215 @@
+<form action="{{cssClass}}" autocomplete="off">
+  <div class="aside">
+    <div class="image">
+      <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+    </div>
+    <div class="status">
+      <div>
+        <table>
+          <tr>
+            <th>{{localize "sherwood.sheet.health"}}</th>
+          </tr>
+          <tr>
+            <td>
+              <input style="text-align: center;" type="number" name="data.health.current" id="data.health"
+                value="{{data.health.current}}">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table>
+          <tr>
+            <th colspan="2">{{localize "sherwood.sheet.armor.name"}}</th>
+          </tr>
+          <tr>
+            <th>{{localize "sherwood.sheet.armor.slash"}}</th>
+            <th>{{localize "sherwood.sheet.armor.blunt"}}</th>
+          </tr>
+          <tr>
+            <td>
+              <input style="text-align: center;" type="number" name="data.armor.blunt" id="data.armor.blunt"
+                value="{{data.armor.blunt}}" min="0">
+            </td>
+            <td>
+              <input style="text-align: center;" type="number" name="data.armor.slash" id="data.armor.slash"
+                value="{{data.armor.slash}}" min="0">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <table>
+          <tr>
+            <th>{{localize "sherwood.sheet.karma.hope"}}</th>
+            <th>{{localize "sherwood.sheet.karma.shadow"}}</th>
+          </tr>
+          <tr>
+            <td>
+              <input style="text-align: center;" type="number" name="data.karma.hope.current" id="data.karma.hope"
+                value="{{data.karma.hope.current}}">
+            </td>
+            <td>
+              <input style="text-align: center;" type="number" name="data.karma.shadow.current" id="data.karma.shadow"
+                value="{{data.karma.shadow.current}}">
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    <div class="character">
+      <div class="character__name" style="display: flex;">
+        <h1 style="flex: 90%;"><input type="text" name="name" id="actor.name" value="{{actor.name}}" /></h1>
+        <a class="roll__button">
+          <i class="fas fa-dice"></i>
+        </a>
+      </div>
+      <div class="character__attributes">
+        {{#each attributes as |attribute|}}
+        <div class="attribute">
+          <label class="attribute__label" for="data.attributes.{{attribute.name}}">{{localize attribute.label}}</label>
+          <input class="attribute__input" min="4" step="2" type="number" data-dtype="Number" name="data.attributes.{{attribute.name}}"
+            id="data.attributes.{{attribute.name}}" value="{{attribute.value}}" />
+        </div>
+        {{/each}}
+      </div>
+      <div class="character__talents">
+        {{#each talents as |talent|}}
+        <div class="talent">
+          <label class="talent__label" for="data.talents.{{talent.name}}">{{localize talent.label}}</label>
+          <input class="talent__input" type="number" min="4" step="2" data-dtype="Number" name="data.talents.{{talent.name}}"
+            id="data.talents.{{talent.name}}" value="{{talent.value}}" />
+        </div>
+        {{/each}}
+      </div>
+    </div>
+    <nav class="tabs" data-group="primary-tabs">
+      <a class="item" data-tab="assets">{{localize "sherwood.sheet.assets"}}</a>
+      <a class="item" data-tab="inv">{{localize "sherwood.sheet.inventory"}}</a>
+    </nav>
+
+    <section class="content">
+      <div class="tab" data-tab="assets" data-group="primary-tabs">
+        <table>
+          <colgroup>
+            <col style="width: 25%;">
+            <col style="width: 65%;">
+            <col style="width: 5%;">
+            <col style="width: 5%;">
+          </colgroup>
+          <tr>
+            <th>{{localize "sherwood.sheet.name"}}</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+          {{#each assets as |asset|}}
+          <tr>
+            <td><img style="height: 32px;" src="{{asset.img}}" data-edit="img" title="{{name}}" /></td>
+            <td>
+              <h4 style="font-weight: bold; text-align: center;">{{name}}</h4>
+            </td>
+            <td>
+              <a class="item-search" data-item-id="{{asset._id}}">
+                <i class="fas fa-search"></i>
+              </a>
+            </td>
+            <td>
+              <a class="item-delete" data-item-id="{{asset._id}}">
+                <i class="fas fa-trash"></i>
+              </a>
+            </td>
+          </tr>
+          {{/each}}
+
+        </table>
+      </div>
+      <div class="tab" data-tab="inv" data-group="primary-tabs">
+        <div style="display: flex;">
+          <div style="flex:50%; padding: 0 5px;">
+            <h3 style="display: flex;justify-content:space-around; align-items: center">
+              <p>{{localize "sherwood.sheet.weapons"}}</p>
+            </h3>
+            <table>
+              <colgroup>
+                <col style="width: 42px;">
+                <col style="width: calc(75% - 42px);">
+                <col style="width: 20%;">
+                <col style="width: 5%;">
+              </colgroup>
+              <tr>
+                <th>{{localize "sherwood.sheet.name"}}</th>
+                <th></th>
+                <th>{{localize "sherwood.sheet.damages"}}</th>
+                <th></th>
+              </tr>
+              {{#each weapons as |weapon|}}
+              <tr class="weapon" data-item-id="{{weapon._id}}">
+                <td><img style="height: 32px;" src="{{weapon.img}}" data-edit="img" title="{{weapon.name}}" /></td>
+                <td>
+                  <h4 style="font-weight: bold; text-align: center;">
+                    <input class="inline-edit" data-field="name" type="text" value="{{weapon.name}}" />
+                  </h4>
+                </td>
+                <td>
+                  <input style="height: 100%;text-align:center;font-size: 1.2em;" type="number" data-dtype="Number"
+                    data-field="data.damages" value="{{data.damages}}" class="inline-edit" />
+                </td>
+                <td style="text-align: center;">
+                  <a class="item-delete" data-item-id="{{weapon._id}}">
+                    <i class="fas fa-trash"></i>
+                  </a>
+                </td>
+              </tr>
+              {{/each}}
+            </table>
+          </div>
+          <div style="flex:50%; padding: 0 5px;">
+            <h3 style="display: flex;justify-content:space-around; align-items: center">
+              <p>{{localize "sherwood.sheet.objects"}}</p>
+            </h3>
+            <table>
+              <colgroup>
+                <col style="width: 42px;">
+                <col style="width: calc(50% - 42px);">
+                <col style="width: 20%;">
+                <col style="width: 5%;">
+              </colgroup>
+              <tr>
+                <th>{{localize "sherwood.sheet.name"}}</th>
+                <th></th>
+                <th>{{localize "sherwood.sheet.quantity"}}</th>
+                <th></th>
+              </tr>
+              {{#each objects as |object|}}
+              <tr class="object" data-item-id="{{object._id}}">
+                <td><img style="height: 32px;" src="{{object.img}}" data-edit="img" title="{{object.name}}" /></td>
+                <td>
+                  <h4 style="font-weight: bold; text-align: center;">
+                    <input class="inline-edit" data-field="name" type="text" value="{{object.name}}" />
+                  </h4>
+                </td>
+                <td>
+                  <input style="height: 100%;text-align:center;font-size: 1.2em;" type="number" data-dtype="Number"
+                    data-field="data.quantity" value="{{data.quantity}}" class="inline-edit" />
+                </td>
+                <td style="text-align: center;">
+                  <a class="item-delete" data-item-id="{{object._id}}">
+                    <i class="fas fa-trash"></i>
+                  </a>
+                </td>
+              </tr>
+              {{/each}}
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+
+
+</form>

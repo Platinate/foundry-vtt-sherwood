@@ -1,0 +1,20 @@
+.task-check-dialog {
+    padding: 10px;
+    &__stats {
+        display: flex;
+        div {
+            flex: 33.33%;
+            padding: 0 5px;
+        }
+
+        label {
+            display: block;
+        }
+
+        select,
+        input {
+            width: 100%;
+            ;
+        }
+    }
+}
