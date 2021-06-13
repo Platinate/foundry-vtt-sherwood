@@ -1,0 +1,31 @@
+{
+    "name" : "sherwood",
+    "title": "Sherwood",
+    "description": "A system for playing Sherwood games",
+    "author": "",
+    "version": 0.01,
+    "mininumCoreVersion": "0.7.9",
+    "compatibleCoreVersion": "0.8.6",
+    "esmodules": [
+        "sherwood.js"
+    ],
+    "styles": [
+        "sherwood.css"
+    ],
+    "packs": [],
+    "languages":[
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        },
+        {
+            "lang": "fr",
+            "name": "French",
+            "path": "lang/fr.json"
+        }
+    ],
+    "gridDistance": 5,
+    "gridUnits": "m",
+    "primaryTokenAttribute": "health"
+}

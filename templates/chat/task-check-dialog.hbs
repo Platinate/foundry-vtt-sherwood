@@ -1,0 +1,24 @@
+<form class="task-check-dialog" action="">
+    <div>
+        <label for="diff">{{localize "sherwood.chat.difficulty"}}</label>
+            <input style="text-align: center;" min="0" value="0" data-dtype="Number" type="number" name="diff" id="diff">
+    </div>
+    <div class="task-check-dialog__stats">
+        <div>
+            <label for="attribute">{{localize "sherwood.chat.attribute"}}</label>
+            <select name="attribute" id="attribute">
+                {{selectOptions config.attributes localize=true}}
+            </select>
+        </div>
+        <div><label for="talent">{{localize "sherwood.chat.talent"}}</label>
+            <select name="talent" id="talent">
+                {{selectOptions config.talents localize=true}}
+            </select>
+        </div>
+        <div>
+            <label for="bonus">{{localize "sherwood.chat.bonus"}}</label>
+            <input style="text-align: center;" min="0" value="0" data-dtype="Number" type="number" name="bonus" id="bonus">
+        </div>
+
+    </div>
+</form>

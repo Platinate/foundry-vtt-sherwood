@@ -1,0 +1,92 @@
+{
+    "Actor": {
+        "types": [
+            "pc",
+            "npc",
+            "monster"
+        ],
+        "templates": {
+            "commonStats": {
+                "description": "",
+                "attributes": {
+                    "force": 0,
+                    "agility": 0,
+                    "spirit": 0,
+                    "sense": 0,
+                    "charisma": 0
+                },
+                "talents": {
+                    "warrior": 0,
+                    "thief": 0,
+                    "nature": 0,
+                    "letter": 0
+                },
+                "armor": {
+                    "blunt": 0,
+                    "slash": 0
+                },
+                "health": 0,
+                "sexe": "",
+                "karma": {
+                    "hope": {
+                        "current": 0,
+                        "max": 8
+                    },
+                    "shadow": {
+                        "current": 0,
+                        "max": 8
+                    }
+                }
+            }
+        },
+        "pc": {
+            "templates": [
+                "commonStats"
+            ],
+            "profile": "",
+            "size": 0,
+            "height": 0,
+            "weight": 0,
+            "eyes": "",
+            "hair": "",
+            "defect": "",
+            "description": "",
+            "xp": 0
+        },
+        "npc": {
+            "templates": [
+                "commonStats"
+            ]
+        }
+    },
+    "Item": {
+        "types": [
+            "weapon",
+            "object",
+            "asset"
+        ],
+        "templates": {
+            "common": {
+                "description": ""
+            }
+        },
+        "weapon": {
+            "templates": [
+                "common"
+            ],
+            "damages": 0,
+            "range": ""
+        },
+        "object": {
+            "templates": [
+                "common"
+            ],
+            "quantity": 0
+        },
+        "asset": {
+            "templates": [
+                "common"
+            ]
+        }
+    }
+}

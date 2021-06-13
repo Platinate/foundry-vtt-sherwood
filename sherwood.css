@@ -1,0 +1,329 @@
+@font-face {
+  font-family: "Caslonish Fraxx";
+  src: url("assets/fonts/CaslonishFraxx.ttf") format("truetype"); }
+
+.app.pc-sheet h1,
+.app.pc-sheet h2,
+.app.pc-sheet h3,
+.app.pc-sheet h4,
+.app.pc-sheet h5,
+.app.pc-sheet h6 {
+  margin: 0; }
+
+.app.pc-sheet .roll__button {
+  flex: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  border: 2px solid #782e22;
+  border-radius: 5px;
+  margin: 0 5px;
+  color: #782e22; }
+  .app.pc-sheet .roll__button:hover {
+    background-color: #782e22;
+    color: white; }
+
+.app.pc-sheet .window-content {
+  background: url("assets/images/background.jpg"); }
+
+.app.pc-sheet input,
+.app.pc-sheet select {
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #782e22; }
+
+.app.pc-sheet label {
+  font-family: "Caslonish Fraxx";
+  color: #AA0000;
+  font-size: 1.2em; }
+
+.app.pc-sheet form {
+  display: flex;
+  flex-direction: row; }
+  .app.pc-sheet form .aside {
+    padding: 5px;
+    flex: 25%; }
+    .app.pc-sheet form .aside .image {
+      grid-area: i; }
+      .app.pc-sheet form .aside .image img {
+        width: 100%;
+        height: auto; }
+    .app.pc-sheet form .aside .status {
+      display: flex;
+      flex-direction: column; }
+      .app.pc-sheet form .aside .status h3 {
+        text-align: center; }
+      .app.pc-sheet form .aside .status table {
+        border: 2px solid #782e22;
+        border-radius: 5px;
+        overflow: hidden;
+        font-family: "Caslonish Fraxx"; }
+        .app.pc-sheet form .aside .status table th {
+          color: white;
+          background-color: #782e22;
+          font-size: 1.3em; }
+        .app.pc-sheet form .aside .status table td {
+          padding: 0 5px; }
+          .app.pc-sheet form .aside .status table td input {
+            font-size: 1.4em; }
+  .app.pc-sheet form .main {
+    flex: 75%;
+    padding: 5px; }
+    .app.pc-sheet form .main .character {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding: 15px 5px; }
+      .app.pc-sheet form .main .character label {
+        display: block; }
+      .app.pc-sheet form .main .character__name input {
+        font-family: "Caslonish Fraxx";
+        border: none;
+        background: transparent;
+        color: #AA0000;
+        font-size: 1.4em;
+        height: 50px; }
+      .app.pc-sheet form .main .character__job {
+        display: flex;
+        padding: 10px 0; }
+        .app.pc-sheet form .main .character__job div {
+          flex: 50%;
+          padding: 5px; }
+          .app.pc-sheet form .main .character__job div select {
+            width: 100%;
+            font-size: 1.8em;
+            border: none;
+            background: transparent;
+            border-bottom: 2px solid #782e22;
+            height: 35px; }
+          .app.pc-sheet form .main .character__job div select,
+          .app.pc-sheet form .main .character__job div option {
+            font-family: "Caslonish Fraxx";
+            color: #AA0000; }
+      .app.pc-sheet form .main .character__attributes {
+        display: flex;
+        justify-content: space-evenly; }
+        .app.pc-sheet form .main .character__attributes .attribute {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 20%;
+          font-family: "Caslonish Fraxx"; }
+          .app.pc-sheet form .main .character__attributes .attribute .attribute__label {
+            text-align: center;
+            font-size: 2em;
+            color: #AA0000; }
+          .app.pc-sheet form .main .character__attributes .attribute .attribute__input {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            border-radius: 50%;
+            margin: 0 auto;
+            font-size: 1.8em;
+            border: 1px solid #782e22; }
+      .app.pc-sheet form .main .character__talents {
+        display: flex;
+        justify-content: space-evenly; }
+        .app.pc-sheet form .main .character__talents .talent {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          font-family: "Caslonish Fraxx";
+          width: 25%; }
+          .app.pc-sheet form .main .character__talents .talent .talent__label {
+            text-align: center;
+            font-size: 1.8em;
+            color: #AA0000; }
+          .app.pc-sheet form .main .character__talents .talent .talent__input {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            border-radius: 50%;
+            margin: 0 auto;
+            font-size: 1.4em;
+            border: 1px solid #782e22; }
+    .app.pc-sheet form .main a.item {
+      font-family: "Caslonish Fraxx";
+      font-size: 1.6em; }
+      .app.pc-sheet form .main a.item.active {
+        text-shadow: none;
+        border-bottom: 2px solid #782e22; }
+      .app.pc-sheet form .main a.item:hover {
+        text-shadow: none; }
+    .app.pc-sheet form .main .tab {
+      padding: 10px; }
+  .app.pc-sheet form .line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; }
+    .app.pc-sheet form .line .form-field {
+      width: 100%;
+      padding: 0 5px; }
+      .app.pc-sheet form .line .form-field input,
+      .app.pc-sheet form .line .form-field label,
+      .app.pc-sheet form .line .form-field select,
+      .app.pc-sheet form .line .form-field h1 {
+        width: 100%; }
+      .app.pc-sheet form .line .form-field label {
+        padding: 2px; }
+      .app.pc-sheet form .line .form-field .radio-group {
+        display: flex;
+        align-items: center; }
+        .app.pc-sheet form .line .form-field .radio-group .checkbox {
+          display: flex !important;
+          align-items: center;
+          font-size: 1.2em; }
+  .app.pc-sheet form .object td,
+  .app.pc-sheet form .weapon td {
+    padding: 0 5px; }
+
+form.asset {
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: grid;
+  grid-template-rows: 64px 100px;
+  gap: 5px; }
+  form.asset .asset__header {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 5px; }
+    form.asset .asset__header img {
+      height: 100%; }
+    form.asset .asset__header input {
+      height: 100%; }
+    form.asset .asset__header h1 {
+      margin: 0; }
+  form.asset .asset__footer textarea {
+    height: 100%;
+    max-width: 100%; }
+
+.asset-card {
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: grid;
+  grid-template-rows: 64px;
+  gap: 5px; }
+  .asset-card__header {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 5px; }
+    .asset-card__header input {
+      height: 100%; }
+    .asset-card__header h1 {
+      margin: 0; }
+  .asset-card__footer textarea {
+    height: 100%;
+    max-width: 100%; }
+
+form.object {
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: grid;
+  grid-template-rows: 64px 100px;
+  gap: 5px; }
+  form.object .object__header {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 5px; }
+    form.object .object__header img {
+      height: 100%; }
+    form.object .object__header input {
+      height: 100%; }
+    form.object .object__header h1 {
+      margin: 0; }
+  form.object .object__footer textarea {
+    height: 100%;
+    max-width: 100%; }
+
+.object-card {
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: grid;
+  grid-template-rows: 64px;
+  gap: 5px; }
+  .object-card__header {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 5px; }
+    .object-card__header input {
+      height: 100%; }
+    .object-card__header h1 {
+      margin: 0; }
+  .object-card__footer textarea {
+    height: 100%;
+    max-width: 100%; }
+
+.weapon label {
+  display: block; }
+
+.weapon select,
+.weapon input {
+  width: 100%; }
+
+.weapon div {
+  padding: 0 5px; }
+
+.task-check-dialog {
+  padding: 10px; }
+  .task-check-dialog__stats {
+    display: flex; }
+    .task-check-dialog__stats div {
+      flex: 33.33%;
+      padding: 0 5px; }
+    .task-check-dialog__stats label {
+      display: block; }
+    .task-check-dialog__stats select,
+    .task-check-dialog__stats input {
+      width: 100%; }
+
+.task-chat h1, .task-chat h4 {
+  text-align: center; }
+
+.task-chat h4 {
+  font-style: italic; }
+
+.task-chat .success {
+  color: green; }
+
+.task-chat .failure {
+  color: red; }
+
+.dc-input {
+  background-color: antiquewhite;
+  border: 2px solid black;
+  border-radius: 4px;
+  height: 100px;
+  width: 100%;
+  margin-top: -46px;
+  margin-right: 10px;
+  user-select: all;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  text-align: center; }
+
+.dc-input input {
+  height: 60px;
+  width: 100px;
+  border: none;
+  color: black;
+  font-family: Impact, sans-serif;
+  font-size: 36px;
+  text-align: center;
+  pointer-events: auto; }
+
+.dc-header {
+  font-family: Tahoma, sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 2px solid red;
+  padding: 2px 2px;
+  text-transform: uppercase; }

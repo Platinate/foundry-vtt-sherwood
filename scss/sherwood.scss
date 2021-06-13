@@ -1,0 +1,57 @@
+// FONTS
+@font-face {
+    font-family: "Caslonish Fraxx";
+    src: url("assets/fonts/CaslonishFraxx.ttf") format("truetype"),;
+   }
+
+// ACTORS
+@import "./actors/pc-sheet.scss";
+
+// ITEMS
+
+@import "./items/asset-sheet.scss";
+@import "./items/object-sheet.scss";
+@import "./items/weapon-sheet.scss";
+
+// CHAT
+
+@import "./chat/task-check-dialog.scss";
+@import "./chat/task-chat.scss";
+
+.dc-input {
+    background-color: antiquewhite;
+    border: 2px solid black;
+    border-radius: 4px;
+    height: 100px;
+    width: 100%;
+    margin-top: -46px;
+    margin-right: 10px;
+    user-select: all;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    text-align: center;
+}
+
+.dc-input input{
+    height:60px;
+    width:100px;
+    border:none;
+    color:black;
+    font-family: Impact, sans-serif;
+    font-size: 36px;
+    text-align:center;
+    pointer-events: auto;
+
+}
+
+.dc-header{
+    font-family: Tahoma, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    text-align:center;
+    border-bottom: 2px solid red;
+    padding: 2px 2px;
+    text-transform: uppercase;
+}

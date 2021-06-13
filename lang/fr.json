@@ -1,0 +1,105 @@
+{
+    "sherwood": {
+        "chat": {
+            "difficulty": "Difficulté",
+            "attribute": "Attribut",
+            "talent": "Talent",
+            "bonus": "Bonus",
+            "taskCheck": "Test",
+            "roll": "Lancer",
+            "cancel": "Annuler",
+            "changeDiff": "Le MJ change la difficulté à :"
+        },
+        "weapon": {
+            "name": "Nom",
+            "damages": "Degâts",
+            "range": "Portee"
+        },
+        "range": {
+            "long": "Longue",
+            "short": "Courte"
+        },
+        "profile": {
+            "archer": "Archer",
+            "outlaw": "Bandit",
+            "knight": "Chevalier",
+            "scout": "Eclaireur",
+            "warrior": "Guerrier",
+            "mage": "Mage",
+            "monk": "Moine",
+            "yeoman": "Paysan",
+            "bard": "Barde",
+            "thief": "Voleur"
+        },
+        "sexe": {
+            "male": "<i class='fas fa-mars'></i>",
+            "female": "<i class='fas fa-venus'></i>"
+        },
+        "defect": {
+            "greedy": "Avare",
+            "talkative": "Bavard",
+            "anger": "Colerique",
+            "credulous": "Credule",
+            "curious": "Curieux",
+            "envies": "Envieux",
+            "dazed": "Etourdi",
+            "gourmet": "Gourmand",
+            "impulsive": "Impulsif",
+            "kleptomaniac": "Kleptomane",
+            "liar": "Menteur",
+            "mockingbird": "Moqueur",
+            "pervert": "Obsede",
+            "lazy": "Paresseux",
+            "fearful": "Peureux, lâche",
+            "phobic": "Phobique",
+            "pretentious": "Prententieux",
+            "dirty": "Sale",
+            "alcoholic": "Soiffard",
+            "shy": "Timide"
+        },
+        "attribute": {
+            "force": "Force",
+            "agility": "Agilite",
+            "spirit": "Esprit",
+            "sense": "Sens",
+            "charisma": "Charisme"
+        },
+        "talent": {
+            "warrior": "Guerrier",
+            "thief": "Filou",
+            "nature": "Forestier",
+            "letter": "Lettre"
+        },
+        "sheet": {
+            "newItem": "Nouvel objet",
+            "name": "Nom",
+            "range": "Portee",
+            "damages": "Degats",
+            "quantity": "Quantite",
+            "profile": "Profile",
+            "age": "Age",
+            "sexe": "Sexe",
+            "hair": "Cheveux",
+            "size": "Taille",
+            "weight": "Poids",
+            "eyes": "Yeux",
+            "defects": "Travers",
+            "health": "Points de vie",
+            "armor": {
+                "name": "Armure",
+                "slash": "Tranchant",
+                "blunt": "Contondant"
+            },
+            "karma": {
+                "hope": "Espoir",
+                "shadow": "Ombre"
+            },
+            "assets": "Atouts",
+            "weapons": "Armes",
+            "objects": "Objets",
+            "description": "Description",
+            "inventory": "Inventaire",
+            "xp": "Experience"
+        }
+    }
+}

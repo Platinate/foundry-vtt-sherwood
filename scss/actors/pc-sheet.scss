@@ -1,0 +1,267 @@
+.app.pc-sheet {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+    }
+
+    .roll__button {
+        flex: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2em;
+        border: 2px solid #782e22;
+        border-radius: 5px;
+        margin: 0 5px;
+        color: #782e22;
+        &:hover {
+            background-color: #782e22;
+            color: white;
+        }
+    }
+
+    .window-content {
+        background: url('assets/images/background.jpg');
+    }
+
+    input,
+    select {
+        border: none;
+        background: transparent;
+        border-bottom: 1px solid #782e22;
+    }
+
+    label {
+        font-family: "Caslonish Fraxx";
+        color: #AA0000;
+        font-size: 1.2em;
+    }
+
+    form {
+        display: flex;
+        flex-direction: row;
+
+        .aside {
+            padding: 5px;
+            flex: 25%;
+
+            .image {
+                grid-area: i;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .status {
+                display: flex;
+                flex-direction: column;
+
+                h3 {
+                    text-align: center;
+                }
+
+                table {
+                    border: 2px solid #782e22;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    font-family: "Caslonish Fraxx";
+
+                    th {
+                        color: white;
+                        background-color: #782e22;
+                        font-size: 1.3em;
+                    }
+
+                    td {
+                        padding: 0 5px;
+
+                        input {
+                            font-size: 1.4em;
+                        }
+                    }
+                }
+            }
+        }
+
+        .main {
+            flex: 75%;
+            padding: 5px;
+
+            .character {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                padding: 15px 5px;
+
+                label {
+                    display: block;
+                }
+
+                &__name {
+                    input {
+                        font-family: "Caslonish Fraxx";
+                        border: none;
+                        background: transparent;
+                        color: #AA0000;
+                        font-size: 1.4em;
+                        height: 50px;
+                    }
+
+                }
+
+                &__job {
+                    display: flex;
+                    padding: 10px 0;
+
+                    div {
+                        flex: 50%;
+                        padding: 5px;
+
+                        select {
+                            width: 100%;
+                            font-size: 1.8em;
+                            border: none;
+                            background: transparent;
+                            border-bottom: 2px solid #782e22;
+                            height: 35px;
+                        }
+
+                        select,
+                        option {
+                            font-family: "Caslonish Fraxx";
+                            color: #AA0000;
+                        }
+                    }
+                }
+
+                &__attributes {
+                    display: flex;
+                    justify-content: space-evenly;
+
+
+                    .attribute {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        width: 20%;
+                        font-family: "Caslonish Fraxx";
+
+                        .attribute__label {
+                            text-align: center;
+                            font-size: 2em;
+                            color: #AA0000;
+                        }
+
+                        .attribute__input {
+                            width: 50px;
+                            height: 50px;
+                            text-align: center;
+                            border-radius: 50%;
+                            margin: 0 auto;
+                            font-size: 1.8em;
+                            border: 1px solid #782e22;
+                        }
+                    }
+                }
+
+                &__talents {
+                    display: flex;
+                    justify-content: space-evenly;
+
+
+                    .talent {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        font-family: "Caslonish Fraxx";
+                        width: 25%;
+
+                        .talent__label {
+                            text-align: center;
+                            font-size: 1.8em;
+                            color: #AA0000;
+                        }
+
+                        .talent__input {
+                            width: 50px;
+                            height: 50px;
+                            text-align: center;
+                            border-radius: 50%;
+                            margin: 0 auto;
+                            font-size: 1.4em;
+                            border: 1px solid #782e22;
+                        }
+                    }
+                }
+
+            }
+
+            a.item {
+                font-family: "Caslonish Fraxx";
+                font-size: 1.6em;
+
+                &.active {
+                    text-shadow: none;
+                    border-bottom: 2px solid #782e22;
+                }
+
+                &:hover {
+                    text-shadow: none;
+                }
+            }
+
+            .tab {
+                padding: 10px;
+            }
+        }
+
+        .line {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+            .form-field {
+                width: 100%;
+                padding: 0 5px;
+
+                input,
+                label,
+                select,
+                h1 {
+                    width: 100%;
+                }
+
+                label {
+                    padding: 2px;
+                }
+
+
+                .radio-group {
+                    display: flex;
+                    align-items: center;
+
+                    .checkbox {
+                        display: flex !important;
+                        align-items: center;
+                        font-size: 1.2em;
+                    }
+                }
+            }
+        }
+
+        .object,
+        .weapon {
+            td {
+                padding: 0 5px;
+            }
+        }
+    }
+}

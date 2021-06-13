@@ -1,0 +1,115 @@
+{
+    "sherwood": {
+        "chat": {
+            "difficulty": "Difficulty",
+            "attribute": "Attribute",
+            "talent": "Talent",
+            "bonus": "Bonus",
+            "taskCheck": "Task check",
+            "roll": "Roll",
+            "cancel": "Cancel",
+            "changeDiff": "The GM changed the difficulty to :"
+        },
+        "weapon": {
+            "name": "Name",
+            "damages": "Damages",
+            "range": "Range"
+        },
+        "range": {
+            "long": "long",
+            "short": "short"
+        },
+        "profile": {
+            "archer": "Archer",
+            "outlaw": "Outlw",
+            "knight": "Knight",
+            "scout": "Scout",
+            "warrior": "Warrior",
+            "mage": "Mage",
+            "monk": "Monk",
+            "yeoman": "Yeoman",
+            "bard": "Bard",
+            "thief": "Thief"
+        },
+        "sexes": {
+            "male": "Male",
+            "female": "Female"
+        },
+        "defect": {
+            "greedy": "Greedy",
+            "talkative": "Talkative",
+            "anger": "Anger",
+            "credulous": "Credulous",
+            "curious": "Curious",
+            "envies": "Envies",
+            "dazed": "Dazed",
+            "gourmet": "Gourmet",
+            "impulsive": "Impulsive",
+            "kleptomaniac": "Kleptomaniac",
+            "liar": "Liar",
+            "mockingbird": "Mockingbird",
+            "pervert": "Pervert",
+            "lazy": "Lazy",
+            "fearful": "Fearful",
+            "phobic": "Phobic",
+            "pretentious": "Pretentious",
+            "dirty": "Dirty",
+            "alcoholic": "Alcoholic",
+            "shy": "Shy"
+        },
+        "attribute": {
+            "force": "Force",
+            "agility": "Agility",
+            "spirit": "Spirit",
+            "sense": "Sense",
+            "charisma": "Charisma"
+        },
+        "talent": {
+            "warrior": "Warrior",
+            "thief": "Thief",
+            "nature": "Nature",
+            "letter": "Letter"
+        },
+        "info": {
+            "profile": "Profile",
+            "age": "Age",
+            "sexe": "Sexe",
+            "hair": "Hair",
+            "size": "Size",
+            "weight": "Weight",
+            "eyes": "Eyes",
+            "defect": "Defect"
+        },
+        "sheet": {
+            "newItem": "New item",
+            "name": "Name",
+            "range": "Range",
+            "damages": "Damages",
+            "quantity": "Quantity",
+            "profile": "Profile",
+            "age": "Age",
+            "sexe": "Sexe",
+            "hair": "Hair",
+            "size": "Size",
+            "weight": "Weight",
+            "eyes": "Eyes",
+            "defects": "Defects",
+            "health": "Health",
+            "armor": {
+                "name": "Armor",
+                "slash": "Slash",
+                "blunt": "Blunt"
+            },
+            "karma": {
+                "hope": "Hope",
+                "shadow": "Shadow"
+            },
+            "assets": "Assets",
+            "weapons": "Weapons",
+            "objects": "Objects",
+            "description": "Description",
+            "inventory": "Inventory",
+            "xp": "Experience"
+        }
+    }
+}

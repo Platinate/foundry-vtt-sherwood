@@ -1,0 +1,22 @@
+<div class="task-chat">
+    <div class="dice-roll">
+        <div class="dice-result">
+            <h4 class="dice-total">{{flavor.result}}</h4>
+        </div>
+    </div>
+    {{#if flavor.success}}
+    <h1 class="success">
+        {{flavor.message}}
+    </h1>
+    <h4>
+        {{flavor.extra}}
+    </h4>
+    {{else}}
+    <h1 class="failure">
+        {{flavor.message}}
+    </h1>
+    <h4>
+        {{flavor.extra}}
+    </h4>
+    {{/if}}
+</div>
