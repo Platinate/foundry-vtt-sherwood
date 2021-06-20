@@ -64,7 +64,7 @@ export class SherwoodActorSheet extends ActorSheet {
     html.find(".roll__button").click(this._onTaskCheck.bind(this));
     html.find(".weapon .inline-edit").change(this._onWeaponEdit.bind(this));
     html.find(".asset .inline-edit").change(this._onAssetEdit.bind(this));
-    html.find(".object .inline-edit").change(this._onObjectEdit.bind(this));
+    html.find(".object .item-quantity .inline-edit").change(this._onObjectEdit.bind(this));
     html.find(".armor .inline-edit").change(this._onArmorEdit.bind(this));
     html.find(".item-description").click(this._onDescriptionClick.bind(this));
   }

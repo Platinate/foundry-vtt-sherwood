@@ -205,27 +205,27 @@
     .asset .asset__footer .editor, .asset .asset__footer .tox.tox-tinymce {
       height: 100% !important; }
 
-.object {
+.object-sheet {
   padding: 5px;
   border: 1px solid black;
   border-radius: 5px;
   display: grid;
   grid-template-rows: 64px 200px;
   gap: 5px; }
-  .object .object__header {
+  .object-sheet .object__header {
     display: grid;
     grid-template-columns: 64px 1fr;
     grid-template-rows: 64px;
     gap: 5px; }
-    .object .object__header img {
+    .object-sheet .object__header img {
       height: 100%; }
-    .object .object__header input {
+    .object-sheet .object__header input {
       height: 100%; }
-    .object .object__header h1 {
+    .object-sheet .object__header h1 {
       margin: 0; }
-  .object .object__footer {
+  .object-sheet .object__footer {
     height: 100%; }
-    .object .object__footer .editor, .object .object__footer .tox.tox-tinymce {
+    .object-sheet .object__footer .editor, .object-sheet .object__footer .tox.tox-tinymce {
       height: 100% !important; }
 
 .weapon label {
@@ -306,6 +306,9 @@
   margin: 0;
   line-height: 1.4;
   padding-left: 12px; }
+
+.sherwood .items-list .item-name i {
+  padding: 0 2px; }
 
 .sherwood .items-list .item-name p {
   margin: 3px 0px;

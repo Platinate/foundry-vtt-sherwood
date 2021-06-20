@@ -5,8 +5,7 @@
   </li>
   {{#each assets as |item id|}}
     <li class="item flexrow" data-item-id="{{item._id}}">
-      <h4 class="item-name"><a class="item-control item-description" title="{{localize 'CYPHERSYSTEM.ShowDescription'}}"><i class="fas fa-angle-{{#if data.showDescription}}down{{else}}right{{/if}} item-angle" aria-hidden="true"></i>{{item.name}}</a></h4>
-      <div class="item-quantity">TEST</div>
+      <h4 class="item-name"><a class="item-control item-description" title="{{localize 'sherwood.ShowDescription'}}"><i class="fas fa-angle-{{#if data.showDescription}}down{{else}}right{{/if}} item-angle" aria-hidden="true"></i>{{item.name}}</a></h4>
       <div class="item-controls">
         <a class="item-delete" data-item-id="{{item._id}}">
               <i class="fas fa-trash"></i>
