@@ -10,6 +10,7 @@ export const preloadHandlebarsTemplates = async function () {
     "systems/sherwood/templates/sheets/actors/parts/actor-inventory.hbs",
     "systems/sherwood/templates/sheets/actors/parts/actor-assets.hbs",
     "systems/sherwood/templates/sheets/actors/parts/actor-description.hbs",
+    "systems/sherwood/templates/sheets/actors/parts/actor-equipment.hbs",
     "systems/sherwood/templates/sheets/partials/asset-card.hbs",
     "systems/sherwood/templates/chat/task-chat.hbs",
   ]);

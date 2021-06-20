@@ -1,10 +1,12 @@
 import { SHERWOOD } from "../../config.js";
+import * as Dice from "../dice.js";
 
 export class SherwoodActorSheet extends ActorSheet {
   /** @override */
   getData() {
     const superData = super.getData();
     const data = superData.data;
+    data.config = CONFIG.sherwood;
     data.data.isGM = game.user.isGM;
     data.actor = superData.actor;
     data.items = superData.items;
@@ -14,6 +16,7 @@ export class SherwoodActorSheet extends ActorSheet {
     data.config = CONFIG.sherwood;
     data.assets = data.items.filter((item) => item.type === "asset");
     data.weapons = data.items.filter((item) => item.type === "weapon");
+    data.armors = data.items.filter((item) => item.type === "armor");
     data.objects = data.items.filter((item) => item.type === "object");
     data.dtypes = ["String", "Number", "Boolean"];
     this._setComputedValuesData(data);
@@ -40,6 +43,12 @@ export class SherwoodActorSheet extends ActorSheet {
         };
       }
     );
+    sheetData.totalBluntArmor = sheetData.armors
+      .map((armor) => armor.data.blunt)
+      .reduce((acc, curr) => acc + curr, 0);
+    sheetData.totalSlashArmor = sheetData.armors
+      .map((armor) => armor.data.slash)
+      .reduce((acc, curr) => acc + curr, 0);
   }
 
   /**
@@ -56,7 +65,7 @@ export class SherwoodActorSheet extends ActorSheet {
     html.find(".weapon .inline-edit").change(this._onWeaponEdit.bind(this));
     html.find(".asset .inline-edit").change(this._onAssetEdit.bind(this));
     html.find(".object .inline-edit").change(this._onObjectEdit.bind(this));
-    html.find(".weapon .inline-edit").change(this._onWeaponEdit.bind(this));
+    html.find(".armor .inline-edit").change(this._onArmorEdit.bind(this));
   }
 
   _onItemCreate(event) {
@@ -75,7 +84,7 @@ export class SherwoodActorSheet extends ActorSheet {
     event.preventDefault();
     const element = event.currentTarget;
     const itemId = element.dataset.itemId;
-    const item = this.actor.getOwnedItem(itemId);
+    const item = this.actor.items.get(itemId);
 
     item.sheet.render(true);
   }
@@ -97,7 +106,17 @@ export class SherwoodActorSheet extends ActorSheet {
     event.preventDefault();
     const element = event.currentTarget;
     const itemId = element.closest(".weapon").dataset.itemId;
-    const item = this.actor.getOwnedItem(itemId);
+    const item = this.actor.items.get(itemId);
+    const field = element.dataset.field;
+
+    return item.update({ [field]: element.value });
+  }
+
+  _onArmorEdit(event) {
+    event.preventDefault();
+    const element = event.currentTarget;
+    const itemId = element.closest(".armor").dataset.itemId;
+    const item = this.actor.items.get(itemId);
     const field = element.dataset.field;
 
     return item.update({ [field]: element.value });
@@ -107,7 +126,7 @@ export class SherwoodActorSheet extends ActorSheet {
     event.preventDefault();
     const element = event.currentTarget;
     const itemId = element.closest(".object").dataset.itemId;
-    const item = this.actor.getOwnedItem(itemId);
+    const item = this.actor.items.get(itemId);
     const field = element.dataset.field;
 
     return item.update({ [field]: element.value });
@@ -117,7 +136,7 @@ export class SherwoodActorSheet extends ActorSheet {
     event.preventDefault();
     const element = event.currentTarget;
     const itemId = element.closest(".asset").dataset.itemId;
-    const item = this.actor.getOwnedItem(itemId);
+    const item = this.actor.items.get(itemId);
     const field = element.dataset.field;
 
     return item.update({ [field]: element.value });

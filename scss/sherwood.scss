@@ -12,11 +12,17 @@
 @import "./items/asset-sheet.scss";
 @import "./items/object-sheet.scss";
 @import "./items/weapon-sheet.scss";
+@import "./items/armor-sheet.scss";
 
 // CHAT
 
 @import "./chat/task-check-dialog.scss";
 @import "./chat/task-chat.scss";
+
+.sherwood .tab,
+.sherwood .tab .editor {
+  overflow-y: auto;
+}
 
 .dc-input {
     background-color: antiquewhite;

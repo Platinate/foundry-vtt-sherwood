@@ -58,6 +58,7 @@
     "Item": {
         "types": [
             "weapon",
+            "armor",
             "object",
             "asset"
         ],
@@ -72,6 +73,13 @@
             ],
             "damages": 0,
             "range": ""
+        },
+        "armor": {
+            "templates": [
+                "common"
+            ],
+            "blunt": 0,
+            "slash": 0
         },
         "object": {
             "templates": [

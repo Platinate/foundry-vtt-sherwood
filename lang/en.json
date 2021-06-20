@@ -111,6 +111,8 @@
             "objects": "Objects",
             "description": "Description",
             "inventory": "Inventory",
+            "equipment": "Equipment",
+            "armors": "Armors",
             "xp": "Experience"
         }
     }

@@ -1,9 +1,20 @@
 <form action="{{cssClass}}" class="asset" autocomplete="off">
   <div class="asset__header">
-        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" />
-        <h1><input type="text" data-dtype="String" name="name" value="{{item.name}}" /></h1>
-    </div>
-    <div class="asset__footer">
-        <textarea name="data.description" id="data.description" cols="30" rows="10">{{data.description}}</textarea>
-    </div>
+    <img src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+    <h1><input
+        type="text"
+        data-dtype="String"
+        name="name"
+        value="{{item.name}}"
+      /></h1>
+  </div>
+  <div class="asset__footer">
+    {{editor
+      content=data.description
+      target="data.description"
+      button=true
+      owner=owner
+      editable=true
+    }}
+  </div>
 </form>

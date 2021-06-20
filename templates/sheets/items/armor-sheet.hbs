@@ -1,0 +1,22 @@
+<form action="{{cssClass}}" class="armor" autocomplete="off">
+  <div style="display: flex;">
+    <div style="flex: 64px;padding: 0 5px;">
+      <img width="64px" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+    </div>
+    <div style="flex: calc(100% - 64px);display: flex;flex-wrap:wrap;padding: 0 5px;">
+      <div style="flex: 100%">
+        <h1>
+          <input height="64px" name="name" type="text" value="{{item.name}}" placeholder="Name" />
+        </h1>
+      </div>
+      <div style="flex: 50%">
+        <label for="data.blunt">{{localize "sherwood.sheet.armor.blunt"}}</label>
+        <input type="number" id="data.blunt" name="data.blunt" data-dtype="Number" value="{{data.blunt}}" />
+      </div>
+      <div style="flex: 50%">
+        <label for="data.slash">{{localize "sherwood.sheet.armor.slash"}}</label>
+        <input type="number" id="data.slash" name="data.slash" data-dtype="Number" value="{{data.slash}}" />
+      </div>
+    </div>
+  </div>
+</form>

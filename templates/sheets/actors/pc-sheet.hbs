@@ -61,12 +61,10 @@
               </tr>
               <tr>
                 <td>
-                  <input style="text-align: center;" type="number" name="data.armor.blunt" id="data.armor.blunt"
-                    value="{{data.armor.blunt}}" min="0">
+                  <input readonly style="text-align: center;" type="number" value="{{totalBluntArmor}}">
                 </td>
                 <td>
-                  <input style="text-align: center;" type="number" name="data.armor.slash" id="data.armor.slash"
-                    value="{{data.armor.slash}}" min="0">
+                  <input readonly style="text-align: center;" type="number" value="{{totalSlashArmor}}">
                 </td>
               </tr>
             </table>
@@ -97,6 +95,7 @@
       <nav class="tabs" data-group="primary-tabs">
         <a class="item" data-tab="stats">{{localize "sherwood.sheet.stats"}}</a>
         <a class="item" data-tab="assets">{{localize "sherwood.sheet.assets"}}</a>
+        <a class="item" data-tab="equ">{{localize "sherwood.sheet.equipment"}}</a>
         <a class="item" data-tab="inv">{{localize "sherwood.sheet.inventory"}}</a>
         <a class="item" data-tab="desc">{{localize "sherwood.sheet.description"}}</a>
       </nav>
@@ -106,6 +105,9 @@
         </div>
         <div class="tab" data-tab="assets" data-group="primary-tabs">
           {{> "systems/sherwood/templates/sheets/actors/parts/actor-assets.hbs" sections=assets}}
+        </div>
+        <div class="tab" data-tab="equ" data-group="primary-tabs">
+          {{> "systems/sherwood/templates/sheets/actors/parts/actor-equipment.hbs" sections=equipment}}
         </div>
         <div class="tab" data-tab="inv" data-group="primary-tabs">
           {{> "systems/sherwood/templates/sheets/actors/parts/actor-inventory.hbs" sections=inventory}}
