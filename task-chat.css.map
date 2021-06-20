@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AACI,UADM,CACN,EAAE,EADN,UAAU,CACH,EAAE,CAAC;EACF,UAAU,EAAE,MAAM;CACrB;;AAHL,AAII,UAJM,CAIN,EAAE,CAAC;EACC,UAAU,EAAE,MAAM;CACrB;;AANL,AAOI,UAPM,CAON,QAAQ,CAAC;EACL,KAAK,EAAE,KAAK;CACf;;AATL,AAWI,UAXM,CAWN,QAAQ,CAAC;EACL,KAAK,EAAE,GAAG;CACb",
-    "sources": [
-        "scss/chat/task-chat.scss"
-    ],
-    "names": [],
-    "file": "task-chat.css"
-}

@@ -1,8 +1,8 @@
 // FONTS
 @font-face {
     font-family: "Caslonish Fraxx";
-    src: url("assets/fonts/CaslonishFraxx.ttf") format("truetype"),;
-   }
+    src: url("assets/fonts/CaslonishFraxx.ttf") format("truetype"), ;
+}
 
 // ACTORS
 @import "./actors/pc-sheet.scss";
@@ -21,43 +21,141 @@
 
 .sherwood .tab,
 .sherwood .tab .editor {
-  overflow-y: auto;
+    overflow-y: auto;
 }
 
-.dc-input {
-    background-color: antiquewhite;
-    border: 2px solid black;
-    border-radius: 4px;
-    height: 100px;
-    width: 100%;
-    margin-top: -46px;
-    margin-right: 10px;
-    user-select: all;
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 200px;
-    text-align: center;
+.sherwood .items-list {
+    list-style: none;
+    margin: 7px 0;
+    padding: 0;
+    overflow-y: auto;
 }
 
-.dc-input input{
-    height:60px;
-    width:100px;
-    border:none;
-    color:black;
-    font-family: Impact, sans-serif;
-    font-size: 36px;
-    text-align:center;
-    pointer-events: auto;
-
-}
-
-.dc-header{
-    font-family: Tahoma, sans-serif;
-    font-size: 22px;
+.sherwood .items-list .item-header {
     font-weight: bold;
-    text-align:center;
-    border-bottom: 2px solid red;
-    padding: 2px 2px;
-    text-transform: uppercase;
+}
+
+.sherwood .items-list .item {
+    line-height: 1.4;
+    padding: 3px 5px;
+    /*border-bottom: 1px solid #BBB;*/
+}
+
+.sherwood .item~.item {
+    border-top: 1px solid #782e22;
+}
+
+.sherwood .item:last-child {
+    border-bottom: 1px solid #782e22;
+}
+
+.sherwood .item-desc:last-child {
+    border-bottom: 1px solid #782e22;
+}
+
+.sherwood .items-list .item .item-image {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 24px;
+    flex: 0 0 24px;
+    margin-right: 5px;
+}
+
+.sherwood .items-list .item img {
+    display: block;
+}
+
+.sherwood .items-list .item-name {
+    margin: 0;
+    line-height: 1.4;
+    padding-left: 12px;
+}
+
+.sherwood .items-list .item-name p {
+    margin: 3px 0px;
+    line-height: 1.4;
+    font-size: 13px;
+}
+
+.sherwood .items-list .item-damage {
+    flex: 0;
+    margin-right: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.sherwood .items-list .item-controls {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 45px;
+    flex: 0 0 45px;
+    text-align: right;
+    /*  margin-top: auto;
+    margin-bottom: auto;*/
+}
+
+.sherwood .items-list .item-quantity {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 75px;
+    flex: 0 0 75px;
+    text-align: center;
+    /*  margin-top: auto;
+    margin-bottom: auto;*/
+}
+
+.sherwood .items-list .item-cypher-limit {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    text-align: center;
+    /*  margin-top: auto;
+    margin-bottom: auto;*/
+}
+
+.sherwood .items-list .item-right {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 80px;
+    flex: 0 0 80px;
+    text-align: right;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.sherwood .items-list .description {
+    text-align: left;
+    line-height: 1.4;
+    border-top-style: dashed;
+    border-color: #782e22;
+    border-top-width: 1px;
+    padding-left: 17px;
+    padding-bottom: 5px;
+    font-size: 13px;
+}
+
+.sherwood .items-list .description p {
+    border-style: none;
+    margin: 3px 0 4px 0;
+}
+
+.sherwood .items-list .description ul {
+    list-style-type: disc;
+}
+
+/* .sherwood .items-list .description ul li {
+    position: relative;
+    margin-left: 1em;
+  } */
+
+.sherwood .items-list .description p:last-of-type {
+    font-size: 13px;
+    border-style: none;
+    margin: 3px 0 0 0;
+}
+
+.sherwood .description-image {
+    float: right;
+    margin: 5px 3px 0 5px;
+}
+
+.description-image-chat {
+    float: right;
+    margin: 0 0 0 5px;
 }

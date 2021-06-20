@@ -66,6 +66,41 @@ export class SherwoodActorSheet extends ActorSheet {
     html.find(".asset .inline-edit").change(this._onAssetEdit.bind(this));
     html.find(".object .inline-edit").change(this._onObjectEdit.bind(this));
     html.find(".armor .inline-edit").change(this._onArmorEdit.bind(this));
+    html.find(".item-description").click(this._onDescriptionClick.bind(this));
+  }
+
+  _onDescriptionClick(clickEvent) {
+    const shownItem = $(clickEvent.currentTarget).parents(".item");
+    const item = duplicate(this.actor.items.get(shownItem.data("itemId")));
+    if (event.ctrlKey || event.metaKey) {
+      let message = "";
+      let brackets = "";
+      let description =
+        "<hr style='margin:3px 0;'><img class='description-image-chat' src='" +
+        item.img +
+        "' width='50' height='50'/>" +
+        item.data.description;
+      let name = item.name;
+      message =
+        "<b>" +
+        item.type.capitalize() +
+        ": " +
+        name +
+        "</b>" +
+        brackets +
+        description;
+      ChatMessage.create({
+        speaker: ChatMessage.getSpeaker(),
+        content: message,
+      });
+    } else {
+      if (item.data.showDescription === true) {
+        item.data.showDescription = false;
+      } else {
+        item.data.showDescription = true;
+      }
+      this.actor.updateEmbeddedDocuments("Item", [item]);
+    }
   }
 
   _onItemCreate(event) {

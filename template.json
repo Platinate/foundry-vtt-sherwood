@@ -64,7 +64,8 @@
         ],
         "templates": {
             "common": {
-                "description": ""
+                "description": "",
+                "showDescription": false
             }
         },
         "weapon": {
